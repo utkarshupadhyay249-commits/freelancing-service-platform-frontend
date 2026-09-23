@@ -49,14 +49,14 @@ const HomePage = () => {
 
   const retrieveAllServices = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/service/fetch/all"
+      "http://freelancing-service-platform-backend-production.up.railway.app/api/service/fetch/all"
     );
     return response.data;
   };
 
   const retrieveAllCategories = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/category/fetch/all"
+      "http://freelancing-service-platform-backend-production.up.railway.app/api/category/fetch/all"
     );
     return response.data;
   };
@@ -64,7 +64,7 @@ const HomePage = () => {
   const searchServices = async () => {
     if (subCategoryId !== "" || subCategoryId !== "0") {
       const response = await axios.get(
-        "http://localhost:8080/api/service/fetch/sub-category-wise?subCategoryId=" +
+        "http://freelancing-service-platform-backend-production.up.railway.app/api/service/fetch/sub-category-wise?subCategoryId=" +
           subCategoryId
       );
       return response.data;

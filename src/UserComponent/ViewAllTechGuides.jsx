@@ -20,7 +20,7 @@ const ViewAllTechGuides = () => {
 
   const retrieveAllUser = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/user/fetch/role-wise?role=Tech Expert",
+      "http://freelancing-service-platform-backend-production.up.railway.app/api/user/fetch/role-wise?role=Tech Expert",
       {
         headers: {
           //   Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token
@@ -40,7 +40,7 @@ const ViewAllTechGuides = () => {
 
   const deleteExpert = (expertId, e) => {
     fetch(
-      "http://localhost:8080/api/user/delete/tech-expert?techExpertId=" +
+      "http://freelancing-service-platform-backend-production.up.railway.app/api/user/delete/tech-expert?techExpertId=" +
         expertId,
       {
         method: "DELETE",

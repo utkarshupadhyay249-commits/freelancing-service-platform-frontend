@@ -59,7 +59,7 @@ const ViewAllServiceRequests = () => {
 
   const retrieveAllServiceRequests = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/service/request/fetch/all"
+      "http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/fetch/all"
     );
     return response.data;
   };
@@ -74,7 +74,7 @@ const ViewAllServiceRequests = () => {
   const downloadRequirement = async (request) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/service/request/requirement/${request.requirement_filename}/download`,
+        `http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/requirement/${request.requirement_filename}/download`,
         {
           responseType: "blob", // Important to handle binary data
         }
@@ -141,7 +141,7 @@ const ViewAllServiceRequests = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/service/" +
+                            "http://freelancing-service-platform-backend-production.up.railway.app/api/service/" +
                             request.service.image1
                           }
                           class="img-fluid"

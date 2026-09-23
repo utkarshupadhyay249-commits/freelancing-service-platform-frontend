@@ -17,7 +17,7 @@ const UserLoginForm = () => {
   };
 
   const loginAction = (e) => {
-    fetch("http://localhost:8080/api/user/login", {
+    fetch("http://freelancing-service-platform-backend-production.up.railway.app/api/user/login", {
       method: "POST",
       headers: {
         Accept: "application/json",

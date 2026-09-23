@@ -24,7 +24,7 @@ const AddServiceForm = () => {
 
   const retrieveAllCategories = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/category/fetch/all"
+      "http://freelancing-service-platform-backend-production.up.railway.app/api/category/fetch/all"
     );
     return response.data;
   };
@@ -74,7 +74,7 @@ const AddServiceForm = () => {
     formData.append("image3", selectedImage3);
 
     axios
-      .post("http://localhost:8080/api/service/add", formData, {
+      .post("http://freelancing-service-platform-backend-production.up.railway.app/api/service/add", formData, {
         headers: {
           // Authorization: "Bearer " + guide_jwtToken, // Replace with your actual JWT token
         },

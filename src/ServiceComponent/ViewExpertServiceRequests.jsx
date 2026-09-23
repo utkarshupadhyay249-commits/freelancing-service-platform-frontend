@@ -81,7 +81,7 @@ const ViewExpertServiceRequests = () => {
 
   const retrieveAllServiceRequests = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/service/request/fetch/tech-expert-wise?techExpertId=" +
+      "http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/fetch/tech-expert-wise?techExpertId=" +
         expert.id
     );
     return response.data;
@@ -97,7 +97,7 @@ const ViewExpertServiceRequests = () => {
   const downloadRequirement = async (request) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/service/request/requirement/${request.requirement_filename}/download`,
+        `http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/requirement/${request.requirement_filename}/download`,
         {
           responseType: "blob", // Important to handle binary data
         }
@@ -125,7 +125,7 @@ const ViewExpertServiceRequests = () => {
 
     addResponse.serviceRequestId = serviceRequestId;
 
-    fetch("http://localhost:8080/api/service/request/negotiation/add", {
+    fetch("http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/negotiation/add", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -185,7 +185,7 @@ const ViewExpertServiceRequests = () => {
 
   const cancelServiceRequest = (serviceRequestId) => {
     fetch(
-      "http://localhost:8080/api/service/request/close?serviceRequestId=" +
+      "http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/close?serviceRequestId=" +
         serviceRequestId,
       {
         method: "GET",
@@ -289,7 +289,7 @@ const ViewExpertServiceRequests = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/service/" +
+                            "http://freelancing-service-platform-backend-production.up.railway.app/api/service/" +
                             request.service.image1
                           }
                           class="img-fluid"
