@@ -23,7 +23,7 @@ const ViewAllServices = () => {
 
   const retrieveAllServices = async () => {
     const response = await axios.get(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/service/fetch/all"
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/service/fetch/all"
     );
     return response.data;
   };
@@ -36,7 +36,7 @@ const ViewAllServices = () => {
   };
 
   const deleteExpertService = (serviceId, e) => {
-    fetch("http://freelancing-service-platform-backend-production.up.railway.app/api/service/delete?serviceId=" + serviceId, {
+    fetch("https://freelancing-service-platform-backend-production.up.railway.app/api/service/delete?serviceId=" + serviceId, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -139,7 +139,7 @@ const ViewAllServices = () => {
                       <td>
                         <img
                           src={
-                            "http://freelancing-service-platform-backend-production.up.railway.app/api/service/" +
+                            "https://freelancing-service-platform-backend-production.up.railway.app/api/service/" +
                             service.image1
                           }
                           class="img-fluid"

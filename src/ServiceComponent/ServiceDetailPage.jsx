@@ -81,7 +81,7 @@ const ServiceDetailPage = () => {
 
   const retrieveService = async () => {
     const response = await axios.get(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/service/fetch/id-wise?serviceId=" + serviceId
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/service/fetch/id-wise?serviceId=" + serviceId
     );
     console.log(response.data);
     return response.data;
@@ -129,7 +129,7 @@ const ServiceDetailPage = () => {
     formData.append("requirement_filename", selectedImage);
 
     axios
-      .post("http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/add", formData, {
+      .post("https://freelancing-service-platform-backend-production.up.railway.app/api/service/request/add", formData, {
         headers: {
           // Authorization: "Bearer " + guide_jwtToken, // Replace with your actual JWT token
         },

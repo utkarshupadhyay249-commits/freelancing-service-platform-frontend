@@ -36,7 +36,7 @@ const UserProfilePage = () => {
 
   const retrieveUser = async () => {
     const response = await axios.get(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/user/fetch/user-id?userId=" + userId
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/user/fetch/user-id?userId=" + userId
     );
     return response.data;
   };

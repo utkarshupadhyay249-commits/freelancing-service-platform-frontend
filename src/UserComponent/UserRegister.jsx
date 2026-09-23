@@ -36,7 +36,7 @@ const UserRegister = () => {
 
     let jwtToken;
 
-    fetch("http://freelancing-service-platform-backend-production.up.railway.app/api/user/register", {
+    fetch("https://freelancing-service-platform-backend-production.up.railway.app/api/user/register", {
       method: "POST",
       headers: {
         Accept: "application/json",

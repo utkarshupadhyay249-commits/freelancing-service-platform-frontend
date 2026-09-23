@@ -31,7 +31,7 @@ const ServiceCard = (service) => {
           {/* Left side - Company Logo */}
           <div className="col-md-4 d-flex align-items-center justify-content-center">
             <img
-              src={"http://freelancing-service-platform-backend-production.up.railway.app/api/service/" + service.item.image1}
+              src={"https://freelancing-service-platform-backend-production.up.railway.app/api/service/" + service.item.image1}
               className="card-img-top rounded img-fluid"
               alt="event image"
               style={{

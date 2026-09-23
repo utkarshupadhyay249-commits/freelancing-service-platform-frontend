@@ -13,7 +13,7 @@ const AddCategoryForm = () => {
   const saveCategory = (e) => {
     let data = { name, description };
 
-    fetch("http://freelancing-service-platform-backend-production.up.railway.app/api/category/add", {
+    fetch("https://freelancing-service-platform-backend-production.up.railway.app/api/category/add", {
       method: "POST",
       headers: {
         Accept: "application/json",

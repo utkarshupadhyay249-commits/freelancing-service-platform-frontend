@@ -23,7 +23,7 @@ const ViewAllCategories = () => {
 
   const retrieveAllCategory = async () => {
     const response = await axios.get(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/category/fetch/all"
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/category/fetch/all"
     );
     console.log(response.data);
     return response.data;
@@ -31,7 +31,7 @@ const ViewAllCategories = () => {
 
   const deleteCategory = (categoryId, e) => {
     fetch(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/category/delete?categoryId=" + categoryId,
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/category/delete?categoryId=" + categoryId,
       {
         method: "DELETE",
         headers: {

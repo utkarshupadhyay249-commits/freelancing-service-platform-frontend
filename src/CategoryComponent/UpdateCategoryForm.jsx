@@ -17,7 +17,7 @@ const UpdateCategoryForm = () => {
   const saveCategory = (e) => {
     let data = { id, name, description };
 
-    fetch("http://freelancing-service-platform-backend-production.up.railway.app/api/category/update", {
+    fetch("https://freelancing-service-platform-backend-production.up.railway.app/api/category/update", {
       method: "PUT",
       headers: {
         Accept: "application/json",

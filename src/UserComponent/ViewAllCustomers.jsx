@@ -19,7 +19,7 @@ const ViewAllCustomers = () => {
 
   const retrieveAllUser = async () => {
     const response = await axios.get(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/user/fetch/role-wise?role=Customer",
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/user/fetch/role-wise?role=Customer",
       {
         headers: {
           //   Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token

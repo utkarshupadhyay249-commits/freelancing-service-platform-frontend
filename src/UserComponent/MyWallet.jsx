@@ -39,7 +39,7 @@ const MyWallet = () => {
 
   const retrieveMyWallet = async () => {
     const response = await axios.get(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/user/fetch/user-id?userId=" + user.id
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/user/fetch/user-id?userId=" + user.id
     );
 
     return response.data;
@@ -58,7 +58,7 @@ const MyWallet = () => {
   
 
   const addMoneyInWallet = (e) => {
-    fetch("http://freelancing-service-platform-backend-production.up.railway.app/api/user/update/wallet", {
+    fetch("https://freelancing-service-platform-backend-production.up.railway.app/api/user/update/wallet", {
       method: "PUT",
       headers: {
         Accept: "application/json",
@@ -80,7 +80,7 @@ const MyWallet = () => {
               console.log(response.razorpay_signature);
               response.razorpay_order_id = options.orderId;
 
-              fetch("http://freelancing-service-platform-backend-production.up.railway.app/api/user/razorpPay/response", {
+              fetch("https://freelancing-service-platform-backend-production.up.railway.app/api/user/razorpPay/response", {
                 method: "PUT",
                 headers: {
                   Accept: "application/json",
@@ -171,7 +171,7 @@ const MyWallet = () => {
 
                 response.razorpay_order_id = options.orderId;
 
-                fetch("http://freelancing-service-platform-backend-production.up.railway.app/api/user/razorpPay/response", {
+                fetch("https://freelancing-service-platform-backend-production.up.railway.app/api/user/razorpPay/response", {
                 method: "PUT",
                 headers: {
                   Accept: "application/json",

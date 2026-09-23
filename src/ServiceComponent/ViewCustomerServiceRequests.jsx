@@ -52,7 +52,7 @@ const ViewCustomerServiceRequests = () => {
 
   const retrieveAllServiceRequests = async () => {
     const response = await axios.get(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/fetch/customer-wise?customerId=" +
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/service/request/fetch/customer-wise?customerId=" +
         customer.id
     );
     return response.data;
@@ -78,7 +78,7 @@ const ViewCustomerServiceRequests = () => {
   const downloadRequirement = async (request) => {
     try {
       const response = await axios.get(
-        `http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/requirement/${request.requirement_filename}/download`,
+        `https://freelancing-service-platform-backend-production.up.railway.app/api/service/request/requirement/${request.requirement_filename}/download`,
         {
           responseType: "blob", // Important to handle binary data
         }
@@ -103,7 +103,7 @@ const ViewCustomerServiceRequests = () => {
 
   const cancelServiceRequest = (serviceRequestId) => {
     fetch(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/close?serviceRequestId=" +
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/service/request/close?serviceRequestId=" +
         serviceRequestId,
       {
         method: "GET",
@@ -168,7 +168,7 @@ const ViewCustomerServiceRequests = () => {
     addResponse.negotiationId = negotiationId;
 
     fetch(
-      "http://freelancing-service-platform-backend-production.up.railway.app/api/service/request/negotiation/customer/update",
+      "https://freelancing-service-platform-backend-production.up.railway.app/api/service/request/negotiation/customer/update",
       {
         method: "POST",
         headers: {
@@ -273,7 +273,7 @@ const ViewCustomerServiceRequests = () => {
                       <td>
                         <img
                           src={
-                            "http://freelancing-service-platform-backend-production.up.railway.app/api/service/" +
+                            "https://freelancing-service-platform-backend-production.up.railway.app/api/service/" +
                             request.service.image1
                           }
                           class="img-fluid"
